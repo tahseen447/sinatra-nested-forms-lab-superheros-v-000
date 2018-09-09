@@ -15,7 +15,7 @@ class App < Sinatra::Base
       params[:team][:members].each do |member|
         SuperHero.new(member)
       end
-
+      @members = SuperHero.all
       erb :'../views/team'
 
     end
