@@ -1,5 +1,6 @@
 require 'sinatra/base'
-require_relative "../models/team.rb"
+require_relative "../models/team"
+require_relative "../models/super_hero"
 
 class App < Sinatra::Base
 
