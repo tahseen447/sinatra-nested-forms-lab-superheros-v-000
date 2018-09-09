@@ -7,7 +7,6 @@ class SuperHero
     @name = params[:name]
     @bio = params[:bio]
     @power = params[:power]
-    puts "#{@name} #{@bio} #{@power}"
     @@all << self
   end
 
