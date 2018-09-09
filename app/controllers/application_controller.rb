@@ -12,7 +12,7 @@ class App < Sinatra::Base
 
     post '/teams' do
       @team = Team.new(params[:team])
-      puts params[:members].inspect
+      puts params[:team].inspect
       params[:team][:members].each do |member|
         puts "here"
         SuperHero.new(member)
