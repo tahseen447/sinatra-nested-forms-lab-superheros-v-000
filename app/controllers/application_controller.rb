@@ -11,7 +11,6 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
-      puts params.inspect
       @team = Team.new(params[:team])
       params[:team][:members].each do |member|
         SuperHero.new(member)
