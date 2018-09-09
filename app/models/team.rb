@@ -2,8 +2,7 @@ class Team
   attr_accessor :name, :motto
 
   def initialize(params)
-    @name = params[:team][:name]
-    @motto = params[:team][:motto]
+    @name = params[:name]
+    @motto = params[:motto]
   end
 end
-

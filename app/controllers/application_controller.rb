@@ -1,5 +1,6 @@
 require 'sinatra/base'
-require_relative "../models/team.rb"
+require_relative "../models/team"
+require_relative "../models/super_hero"
 
 class App < Sinatra::Base
 
@@ -11,10 +12,10 @@ class App < Sinatra::Base
 
     post '/teams' do
       @team = Team.new(params[:team])
-      @members={}
       params[:team][:members].each do |member|
+        SuperHero.new(member)
       end
-
+      @members = SuperHero.all
       erb :'../views/team'
 
     end
