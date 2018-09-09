@@ -16,6 +16,7 @@ class App < Sinatra::Base
         SuperHero.new(member)
       end
       @members = SuperHero.all
+      puts "#{@members.size}""
       erb :'../views/team'
 
     end
