@@ -11,6 +11,7 @@ class App < Sinatra::Base
     end
 
     post '/teams' do
+      puts "HERE"
         @team = Team.new(params[:team])
       params[:team][:members].each do |member|
         puts "here"
