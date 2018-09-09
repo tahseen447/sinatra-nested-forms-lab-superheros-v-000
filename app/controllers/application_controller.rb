@@ -16,7 +16,6 @@ class App < Sinatra::Base
         SuperHero.new(member)
       end
       @members = SuperHero.all
-      puts "#{@members.inspect}"
       erb :'../views/team'
 
     end
